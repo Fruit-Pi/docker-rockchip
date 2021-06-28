@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libqtgconf
+Description: Qt binding and QML plugin for GConf.
+Version: 0.0
+
+Requires: QtCore
+Libs: -L${libdir} -lQtGConf
+Cflags: -I${includedir}/QtGConf

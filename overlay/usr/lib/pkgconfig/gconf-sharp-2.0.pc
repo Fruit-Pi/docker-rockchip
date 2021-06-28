@@ -1,0 +1,9 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+
+Name: GConf#
+Description: GConf# - GConf .NET Binding
+Version: 2.24.2
+Libs: -r:${libdir}/cli/gconf-sharp-2.0/gconf-sharp.dll
