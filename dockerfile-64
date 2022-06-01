@@ -80,6 +80,12 @@ RUN apt-get install -y debhelper-compat libjpeg-dev:arm64 libpng-dev:arm64 libud
 ## yocto
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y gawk wget git-core diffstat unzip texinfo chrpath socat xterm locales
 
+# v4l2
+RUN apt build-dep -y v4l-utils
+
+# rktoolkit
+#RUN apt-get install -y libmad-ocaml-dev libmad0-dev:arm64
+
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
@@ -93,6 +99,7 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 RUN echo "Update Headers!"
 RUN dpkg -i /packages/arm64/rga/*.deb
 RUN dpkg -i /packages/arm64/mpp/*.deb
+#RUN dpkg -i /packages/arm64/libv4l/*.deb
 #RUN dpkg -i /packages/arm64/gst-rkmpp/*.deb
 #RUN dpkg -i /packages/arm64/ffmpeg/*.deb
 #RUN dpkg -i /packages/arm64/libmali/libmali-midgard-t86x-r18p0-x11*.deb
