@@ -18,25 +18,25 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y sudo loc
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get build-dep -y -a armhf libdrm
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get build-dep -y -a armhf xorg-server
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y gstreamer1.0-plugins-bad:armhf gstreamer1.0-plugins-base:arnhf gstreamer1.0-tools:arnhf \
-        gstreamer1.0-alsa:armhf gstreamer1.0-plugins-base-apps:arnhf qtmultimedia5-examples:arnhf
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y gstreamer1.0-plugins-bad:armhf gstreamer1.0-plugins-base:armhf gstreamer1.0-tools:armhf \
+        gstreamer1.0-alsa:armhf gstreamer1.0-plugins-base-apps:armhf qtmultimedia5-examples:armhf
 
 # rga
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libdrm-dev:armhf
 
 # gstreamer-rockchip
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libx11-dev:armhf libdrm-dev:arnhf libgstreamer1.0-dev:arnhf \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libx11-dev:armhf libdrm-dev:armhf libgstreamer1.0-dev:armhf \
         libgstreamer-plugins-base1.0-dev:armhf
 
 # libmali
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libstdc++6:armhf libgbm-dev:arnhf libdrm-dev:arnhf libx11-xcb1:arnhf libxcb-dri2-0:arnhf libxdamage1:arnhf \
-        libxext6:armhf libwayland-client0:arnhf
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libstdc++6:armhf libgbm-dev:armhf libdrm-dev:armhf libx11-xcb1:armhf libxcb-dri2-0:armhf libxdamage1:armhf \
+        libxext6:armhf libwayland-client0:armhf
 
 #drm-cursor
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libgbm-dev:armhf libegl1-mesa-dev:arnhf libgles2-mesa-dev:arnhf
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y libgbm-dev:armhf libegl1-mesa-dev:armhf libgles2-mesa-dev:armhf
 
 # glmark2
-RUN apt-get install -y debhelper-compat libjpeg-dev:armhf libpng-dev:arnhf libudev-dev:arnhf  libxcb1-dev:arnhf python3 wayland-protocols libwayland-dev libwayland-bin
+RUN apt-get install -y debhelper-compat libjpeg-dev:armhf libpng-dev:armhf libudev-dev:armhf  libxcb1-dev:armhf python3 wayland-protocols libwayland-dev libwayland-bin
 
 # rktoolkit
 #RUN apt install -y libmad-ocaml-dev libmad0-dev:armhf
